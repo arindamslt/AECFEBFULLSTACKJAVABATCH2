@@ -1,0 +1,292 @@
+DATE:21.02.2025
+===============================================================================
+FULL STACK JAVA
+===============================================================================
+SOFTWARE
+=========================
+MYSQL
+STS===SPRING TOOL SUITE
+JAVA17
+WINRAR
+==============================================================================
+DATABASE
+================================================================================
+
+DBMS====DATABASE MANAGEMENT SYSTEM
+DATABASE===COLLECTION INTERELATED DATA OR TABLES
+DBMS===DATABASE+SQL
+SQL===STRUCTURED QUERY LANGUAGE
+JAVA===HLLL==3RD
+BOTH HOW PART AND WHAT PART IS KNOWN TO US
+4TH GEN===NON PROCEDURAL LANGUAGE
+HOW PART IS NOT KNOWN TO US
+WHAT PART IS KNOWN TO US
+SELECT * FROM EMP;
+SQL COMMAND
+===============================================================================
+1.DDL==DATA DEFINATION LANGUAGE
+=============================================================
+CREATE,ALTER,RENAME,TRUNCATE,DROP,PURGE
+2.DML==DATA MANIPULATION LANGUAGE
+==========================================
+INSERT,UPDATE,DELETE,MERGE
+=======================================================
+3.DATA RERIEVAL
+=======================================
+SELECT
+====================================================
+4.TCL==TRANSACTION CONTROL LANGUAGE
+=======================================================
+COMMIT,ROLLBACK,SAVEPOINT
+5.DCL===DATA CONTROL LANGUAGE
+===============================================
+GRANT,REVOKE
+========================================
+RDBMS KIND OF SOFTWARE
+===================================
+MYSQL,ORACLE,SQLSERVER
+================================================
+MYSQL DATATYPE
+===============================================
+VARCHAR===ALPHANUMERIC==
+EX:A1
+CHAR
+DECIMAL
+INT
+DATE===YYYY-MM-DD
+       2025-02-21
+TIMESTAMP===BOTH DATE AND TIME
+
+ CREATE DATABASE AECDBST;
+SHOW DATABASES;
+USE AECDBST;
+SHOW TABLES;
+TABLE:CUSTOMER
+FIELD NAME      DATA TYPE    SIZE
+CID             VARCHAR       10
+CNAME           VARCHAR       25
+CPHNO           VARCHAR       10
+===============================================================
+ CREATE TABLE CUSTOMER
+     (CID  VARCHAR(10),
+     CNAEM VARCHAR(25),
+      CPHNO VARCHAR(10)
+     );
+SHOW TABLES;
+DESC CUSTOMER;
+INSERT INTO CUSTOMER VALUES('C1','ARUP','3333');
+INSERT INTO CUSTOMER VALUES('C1','ARUP','3333');
+SELECT * FROM CUSTOMER;
+
+CONSTRAINTS
+=======================================================================
+BEFORE INSERTING ANY DATA INTO TABLE YOU HAVE TO SATISFY CERTAIN RULES AND REGULATION
+TYPES OF CONSTRAINTS
+======================================
+PRIMARY KEY===IT DOES NOT ACCEPT NULL VALUE AS WELL AS DUPLICATE VALUE
+UNIQUE KEY==IT CAN'T ACCEPT DUPLICATE VALUE BUT ACCEPT NULL VALUE
+NOT NULL===CAN'T INSERT NULL VALUE
+CHECK CONSTRAINT
+FOREIGN KEY===IT WILL ACCEPT OTHER TABLES PRIMARY KEY VALUE
+CREATE TABLE DEPT
+(DEPTNO VARCHAR(10),
+ DNAME  VARCHAR(25) NOT NULL,
+ LOC    VARCHAR(25) NOT NULL,
+CONSTRAINT DEPT_DEPTNO_PK PRIMARY KEY(DEPTNO)
+);
+DESC DEPT;
+INSERT INTO DEPT VALUES('D1','MKTG','KOLKATA');
+SELECT * FROM DEPT;
+INSERT INTO DEPT VALUES('D2','FINANCE','CHENNAI');
+INSERT INTO DEPT VALUES('D3','IT','MUMBAI');
+INSERT INTO DEPT VALUES('D4','HR','DELHI');
+
+CREATE TABLE EMP
+(EID  VARCHAR(10),
+ ENAME VARCHAR(25) NOT NULL,
+ JOB   VARCHAR(25),
+ SAL   DECIMAL,
+ COMM  DECIMAL,
+ HIREDATE  DATE,
+ DEPTNO VARCHAR(10),
+CONSTRAINT EMP_EID_PK PRIMARY KEY(EID),
+CONSTRAINT EMP_DEPTNO_FK FOREIGN KEY(DEPTNO) REFERENCES DEPT(DEPTNO)
+);
+DESC EMP;
+INSERT INTO EMP VALUES('E1','ARUP','MANAGER',65000,5000,'2001-02-15','D1');
+INSERT INTO EMP VALUES('E2','SUMAN','CLERK',25000,1000,'2001-02-16','D1');
+INSERT INTO EMP VALUES('E3','AJOY','MANAGER',55000,2000,'2001-02-12','D2');
+INSERT INTO EMP VALUES('E4','ANNANYA','ANALYST',45000,7000,'2001-02-05','D2');
+INSERT INTO EMP VALUES('E5','RAJAT','MANAGER',75000,10000,'2001-02-06','D3');
+INSERT INTO EMP VALUES('E6','JYOTI','CLERK',35000,NULL,'2001-01-06','D3');
+SELECT * FROM EMP;
+SELECT * FROM DEPT;
+===========================================================================================
+ALL ROWS
+====================================
+SELECT * FROM EMP;
+SPECIFIC COLUMN DATA
+=================================================================
+SELECT ENAME,JOB,SAL FROM EMP;
+===================================================================
+RESTRICTION OF DATA
+=========================================================
+SELECT * FROM EMP WHERE ENAME='ARUP'; 
+SELECT * FROM EMP WHERE SAL >45000;
+SELECT * FROM EMP WHERE JOB='MANAGER';
+IN OPERATOR
+===============================================
+SELECT * FROM EMP WHERE JOB IN('MANAGER','CLERK');
+SELECT * FROM EMP WHERE JOB NOT IN('MANAGER','CLERK');
+AND OPERATOR
+=============================================================================
+SELECT * FROM EMP WHERE JOB='MANAGER' AND SAL>55000;
+SELECT * FROM EMP WHERE JOB='MANAGER' OR SAL>25000;
+==============================================================================
+LIKE OPERATOR
+=======================================================================
+SELECT * FROM EMP WHERE ENAME LIKE 'A%';
+SELECT * FROM EMP WHERE ENAME LIKE '_J%';
+SELECT * FROM EMP WHERE ENAME LIKE '%T';
+SELECT * FROM EMP WHERE ENAME LIKE '%A%';
+=======================================================================
+COMPUTED FIELD
+==========================================================================
+SELECT ENAME,JOB,SAL,COMM,SAL+COMM TOTALSAL FROM EMP;
+SELECT ENAME,JOB,SAL,COMM,SAL+IFNULL(COMM,0) TOTALSAL FROM EMP;
+SELECT ENAME,JOB,SAL,IFNULL(COMM,0) COMM,SAL+IFNULL(COMM,0) TOTALSAL FROM EMP;
+==============================================================================
+DUPLICATE TABLE
+===============================================================================
+CREATE TABLE DEPT1 AS SELECT * FROM DEPT;
+SELECT * FROM DEPT1;
+===================================================================================
+DUPLICATE TABLE WITHOUT DATA
+=============================================================================
+CREATE  TABLE DEPT2 AS SELECT * FROM DEPT WHERE 1=2;
+====================================================================================
+DML OPERATION
+====================================================
+DELETE FROM DEPT1 WHERE DEPTNO='D4';
+UPDATE DEPT1 SET DNAME='OPRN',LOC='BANGALORE' WHERE  DEPTNO='D3';
+SELECT * FROM DEPT1;
+======================================================================================
+JOINING
+======================================================================================
+SELECT * FROM EMP;
+SELECT * FROM DEPT;
+SELECT E.ENAME,E.JOB,E.SAL,D.DEPTNO,D.DNAME,D.LOC FROM
+EMP E JOIN  DEPT D ON(E.DEPTNO=D.DEPTNO);
+==============================================================================
+SELECT E.ENAME,E.JOB,E.SAL,D.DEPTNO,D.DNAME,D.LOC FROM
+EMP E LEFT OUTER JOIN  DEPT D ON(E.DEPTNO=D.DEPTNO);
+SELECT E.ENAME,E.JOB,E.SAL,D.DEPTNO,D.DNAME,D.LOC FROM
+EMP E RIGHT OUTER JOIN  DEPT D ON(E.DEPTNO=D.DEPTNO);
+============================================================================
+VIEW IS A LOGICAL STRUCTURE OF A TABLE.IT DOES NOT STORE DATA PERMANENTLY.
+CREATE VIEW EMP_DEPT_VW
+AS
+SELECT E.ENAME,E.JOB,E.SAL,D.DEPTNO,D.DNAME,D.LOC FROM
+EMP E JOIN  DEPT D ON(E.DEPTNO=D.DEPTNO);
+SELECT * FROM EMP_DEPT_VW;
+===========================================================================
+TABLE:PURCHASE
+============================================================================
+VOUCHNO   INT  AUTOGENERATED
+ORDERDT   DATE STORE CURRENT DATE
+PNAME     VARCHAR 25  NOT NULL
+PQTY      INT
+PRICE     DECIMAL
+====================================================================================
+CREATE TABLE PURCHASE
+(VOUCHNO INT AUTO_INCREMENT,
+ORDERDT   DATE DEFAULT(CURRENT_DATE),
+PNAME     VARCHAR(25),
+PQTY       INT,
+PRICE      DECIMAL,
+CONSTRAINT PURCHASE_VOUCHNO_PK PRIMARY KEY(VOUCHNO)
+);
+===================================================================================
+INSERT INTO PURCHASE(PNAME,PQTY,PRICE) VALUES('TV',5,25000.00);
+INSERT INTO PURCHASE(PNAME,PQTY,PRICE) VALUES('TAB',2,22000.00);
+==============================================================================
+SELECT * FROM PURCHASE;
+===============================================================================
+JDK17
+WINRAR
+STS
+==============================================================================
+MAVEN
+=================================================================================
+MAVEN IS A BUILD TOOL
+PURPOSE 
+=========================================================
+TO AUTOMATE THE PROJECT BUILDING PROCESS
+====================================================
+PROJECT BUILDING PROCESS
+================================================================
+1.DOWNLOAD THE JAR FILES
+2.COMPILE THE SOURCE CODE
+3.EXECUTE THE TEST CASES
+4.PACKAGING INTO JAR OR WAR FILES
+=================================================================
+1.GROUP ID===ORGANIZATION NAME
+  XYZ.LTD
+2.ARTIFACT ID===PROEJCT NAME
+3.VERSION===SNAPSHOT=====UNDER DEVELOPING
+            RELEASE
+4.PACKAGE===JAR OR WAR
+5.DEPENDENCIES===
+6.pom.xml====PROJECT OBJECT MODEL
+             DEPENDENCIES ADDED HERE
+7.REPOSITORIES
+    WHERE THE JAR FILES ARE STORED
+    THREE TYPES
+==============================
+1.LOCAL====HDD
+2.CENTRAL==CLOUD
+3.REMOTE
+GOAL
+===================
+CLEAN
+COMPILE 
+PACKAGE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
