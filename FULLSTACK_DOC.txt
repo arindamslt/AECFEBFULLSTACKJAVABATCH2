@@ -251,6 +251,99 @@ GOAL
 CLEAN
 COMPILE 
 PACKAGE
+====================================================================
+DATE:22.02.2025
+======================================================================
+JDBC
+========================================================================
+JAVA DATABASE CONNECTIVITY
+=======================================================================
+import java.sql.*;===SET OF CLASSES AND SET OF INTERFACES
+LIST OF INTERFACES
+==============================================================================
+1.Connection==TO ESTABLISH THE CONNECTION
+2.Statement====EXECUTE THE QUERY
+3.PreparedStatement==EXECUTE PRECOMPILED SQL STATEMENT
+4.CallableStatement=====EXECUTE STORED PROCEDURE
+5.ResultSet=======STORE DATA INTO RESULTSET
+6.ResultSetMetaData==GIVE DETAILS IBNFORMATION OF RESULTSET
+7.DatabaseMetaData====GIVE DETAILS INFORMATION OF DATABASE
+CLASSES
+==========================================
+1.Drivermanager=====REGISTER AND LOAD THE DRIVER
+2.Date=======DEALS WITH DATE DATA TYPE
+3.TIMESTAMP====DEALS WITH BOTH DATE AND TIME
+===================================================================
+EXCEPTION HANDLE HERE
+================================================
+ClassNotFoundException
+SQLException
+==================================================
+TYPES OF DRIVER
+=========================================
+1.JDBC-ODBC BRIDGE===CALLED TYPE-I DRIVER
+2.NATIVE PROTOCOL===ALL JAVA===TYPE-II DRIVER
+3.JDBC-NETWORK --ALL JAVA
+4.TYPE-IV DRIVER
+===================================================================
+MAVEN PROJECT===JDbcDemo
+DEPENDENCY ADDED===MYSQL CONNECTOR
+=======================================================================
+CREATE TABLE PRODUCT
+(PID   VARCHAR(10),
+ PNAME VARCHAR(25) NOT NULL,
+ PQTY   INT,
+ PRICE  DECIMAL,
+ CONSTRAINT PRODUCT_PID_PK PRIMARY KEY(PID)
+);
+INSERT INTO PRODUCT VALUES('P1','TV',5,25000.00);
+INSERT INTO PRODUCT VALUES('P2','TAB',2,22000.00);
+SELECT * FROM PRODUCT;
+STEPS OF COMMUNICATION
+===============================================
+1.import java.sql.*;
+2.REGISTER AND LOAD THE JDBC DRIVER
+3.ESTABLISH THE CONNECTION
+ System.out.println(rs.getString(1)+"===>"+rs.getString(2)+"===>"+rs.getInt(3)+"===>"+rs.getDouble(4));
+=================================================================================================
+ORM
+========================================================
+OBJECT RELATIONAL MAPPING
+===========================================================
+HEAVY WEIGHT
+==============================================================
+ .java===compile===.class===container===.java===.class==o/p
+
+
+LIGHT WEIGHT
+===============================================================
+.java===compile==.class===container take===.class===o/p
+POJO CLASS==PLAIN OLD JAVA OBJECT
+GETTER() SETTER() CONSTRUCTOR() TOSTRING()
+===========================================================
+Maven Project=====HibernateAll
+DEPEDENCY REQUIRED
+================================
+1.HIBERNATE CORE
+2.MYSQL
+==================================================
+META-INT===COPIED TO src/main/resources
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
