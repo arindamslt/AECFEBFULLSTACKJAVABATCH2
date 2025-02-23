@@ -331,6 +331,122 @@ META-INT===COPIED TO src/main/resources
 ====================================================
 DATE:23.02.2025
 ====================================================================================
+CRUD OPERATION OF USING HIBERNATE
+====================================
+INSERT
+UPDATE
+DELETE
+FECTH
+FETCH DATA IN HIBERNATE IN THREE WAYS
+====================================================================
+1.HQL==HIBERNATE QUERY LANGUAGE===KNOWS ONLY CLASS
+2.JPQL===JAVA PERSISTANCE QUERY LANAGUAGE==KNOWS THE CLASS
+3.NATIVE SQL===KNOWS THE TABLE
+====================================================================================
+SPRING
+=================================================================================
+DESKTOP APPLICATION========CORE JAVA,AWT,SWING,SPRING            =======.JAR
+WEB   APPLICATION===========SERVLET,JSP,HTML,CSS,JAVASCRIPT,SPRING WEB MVC  =====.WAR
+ENTERPRISE APPLICATIOMN=====SPRING=============.EAR(.JAR+.WAR)
+=====================================================================================
+SPRING IS AN OPEN SOURCE LIGHT WEIGHT DEPENDENCY INJECTION BASED FRAMEWORK SOFTWARE
+TO DEVELOP JAVA/JEE BASED APPLICATION
+
+======================================================================================
+FRAMEWORK==TECHNOLOGIES+DESIGN PATTERN
+=====================================================================
+TECHNOLOGIES
+===================
+WEB===SERVLET,JSP
+MAILING===JAVAMAIL
+SMS===JMS
+=========================================================================
+FEATURES OF THE SPRING
+==============================================
+CONTAINER MANAGEMENT SYSTEM
+========================================================================
+SCAN THE CLASSES
+CREATE THE OBJECT
+PROVIDE THE DATA TO THE OBJECT
+LINKING THE OBJECT
+DESTROY THE OBJECT
+====================================================
+DEPENDENCY
+==============================================================================
+IN CASE OF SPRING THE INSTANCE VARIABLE IS DEPENDENCY
+DEPENDENCY INJECTION
+=====================================================
+PROVIDE THE DATA TO THE DEPENDENCY IS CALLED DEPENDENCY INJECTION
+TYPES OF DEPENDENCY INJECTION
+==============================================
+1.PRIMITIVE TYPE
+2.COLLECTION TYPES
+ LIST,SET,PROPERTIES,MAP
+3.CONSTRUCTOR INJECTION
+4.INTERFACE INJECTION
+5.METHOD INJECTIOBN
+MODULES IN SPRING
+===============================
+1.SPRING CORE
+2,SPRING DAO
+3.SPRING AOP
+4.SPRING CONTEXT
+5.SPRING
+6.SPRING MVC
+7.SPRING ORM
+SPRING CORE
+================================================
+IT PROVIDES RULES AND REGULATION TO WRITE  A SPRING CODE
+==========================================================
+SPRING BEAN
+================================================
+CLASS+ RULES GIVEN BY THE SPRING
+RULES
+=================================
+class is public
+dependency is private
+default constructor
+parameterised constructor
+getter() setter(0
+toString()
+hshcode()
+equals()
+===============================================================
+ANNOTATION
+=========================================================
+BASIC ANNOTATION
+==========================================================
+STEREO TYPE ANNOTATION
+
+===========================================================
+
+MAVEN PROJECT
+==============================================================
+PROJECT NAME:SpringAll
+DEPENDENCY:SpringCore
+=============================================================
+COLLECTION
+=======================================================
+List=====ALLOW DUPLICATE VALUE
+Set======DOES NOT ALLOW DUPLICATE VALUE
+Map======STORE DATA IN KEY VALUE PAIR
+PROPERTIES===STORE DATA IN KEY VALUE PAIR BUT BOTH OF THEM STRING
+Client
+==================================================================
+cid====
+cname==
+friends
+phno
+purchase===TV 25000.00
+           TAB 22000.00
+pinfo=====ADAHR  77475ADB
+          PAN    545454REC 
+================================================================
+
+
+
+
+
 
 
 
