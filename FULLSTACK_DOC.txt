@@ -563,6 +563,93 @@ delete()
 update()
 @Repository==OBJECT CREATION+DATABASE OPERATION
 @Service=====OBJECT CREATION+TRANSACTION MANAGEMENT(COMMIT,ROLLBACK,SAVEPOINT)
+=======================================================================================
+DATE:25.02.2025
+=======================================================================================
+RESTFULL WEBSERVICES
+=====================================================================================
+WEBSRVICE
+===============================================================
+IT IS USED TO COMMUNICATE BETWEEN TWO INTER OPERABLE APPLICATION
+===========================================================================
+TYPES OF WEBSERVICE
+==============================================
+TWO TYPES
+=======================================
+SOAP===SIMPLE OBJECT ACCESS PROTOCOL============IT SUPPORT ONLY XML
+REST===REPRESENTATIONAL STATE TRANSFER===========SUPPORT  BOTH XML AND JSON
+===============================================================================
+HTTP METHODS
+===========================================================
+POST===ADD DATA TO THE  SERVER
+GET===GET DATA FROM THE SERVER
+DELETE===DELETE DATA TO THE SERVER
+PUT==UPDATE DATA TO THE SERVER
+PATCH===PARTIAL UPDATE TO SERVER
+===================================================================
+ERROR NUMBER
+========================================
+404====NO DATA FOUND
+500===INTERNAL SERVER ERROR
+200==OK
+==============================================================
+ACTION BASED URL
+===================================================================
+www.xyz.com?id=101
+            QUERY PARAMETER
+RESOURCE BASED URL
+===========================================
+www.xyz.com/id/1
+            PATH VARIABLE
+REST API TOOL
+===============================
+POSTMAN
+SWAGGER
+===========================================================
+PROJECT NAME:RESTAPI
+=================================
+DEPENDENCY
+=============================
+MYSQL
+DATAJPA
+SPRINGWEB
+SPRINGDEVTOOLS
+==================================================
+TABLE:PRD CLASSNAME:Product
+PID  VARCHAR  10
+PNAME VARCHAR 25  NOT NULL
+PQTY  INT
+PRICE DECIMAL
+======================================================
+FOR ADD DATA
+========================================================
+http://localhost:1005/product/add
+{
+  "pid":"P1",
+  "pname":"TV",
+  "pqty":5,
+  "price":25000.00
+}
+FETCH
+======================
+http://localhost:1005/product/fetch
+===========================================
+FETCH BY PID
+=========================================
+http://localhost:1005/product/fetch/P1
+DELETE
+===============================================
+http://localhost:1005/product/del/P2
+====================================================
+UPDATE
+======================================================
+http://localhost:1005/product/upd/P1
+=========================================================
+
+
+
+
+
 
 
 
