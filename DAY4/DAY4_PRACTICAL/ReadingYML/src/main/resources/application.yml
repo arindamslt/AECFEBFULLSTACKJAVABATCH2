@@ -1,0 +1,5 @@
+myapp:
+ driver: com.mysql.jdbc.cj.driver
+ url: jdbc://mysql:localhost:3306/test
+ username: root
+ pass: arindam
