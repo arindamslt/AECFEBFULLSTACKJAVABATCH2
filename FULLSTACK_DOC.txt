@@ -644,7 +644,58 @@ http://localhost:1005/product/del/P2
 UPDATE
 ======================================================
 http://localhost:1005/product/upd/P1
+======================================================
+REACT JS
+=========================================================================
+PRERQUISITE
 =========================================================
+HTML
+CSS
+JAVASCRIPT
+ES6
+=============================================================
+NODE JS
+========================================================================
+JAVASCRIPT
+===========================================================================
+JAVASCRIPT IS A PROGRAMMING LANGUAGE.IT CAN COMMUNICATE DATABASE,WEBSERVER,APPLICATION
+SERVER.
+PURPOSE
+=============================================================================
+1.DYNAMIC USER INTERFACE
+2.CLIENT SIDE AND SERVER SIDE VALIDATION
+3.COMMUNICATE FROND END AND BACK END APPLICATION
+WHAT KIND OF APPLICATION USING JAVASCRIPT
+=======================================================
+1.STAND ALONE APPLICATION
+2.WEB APPLICATION
+3.MACHINE LEARNING APP
+4.MOBILE APPLICATION
+============================================================================
+JAVASCRIPT RUNTIME ENVIRONMENT
+====================================
+NODE JS
+=============================================================================
+TYPES OF VARIABLE
+=============================================================
+PRIMITIVE TYPE====number,string,bytes,symbol,null,boolean,undefined
+NON PRIMITIVE TYPE===object
+========================================================================
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+TYPES OF FUNCTION
+======================================================================
+CONCREDE FUNCTION
+PARAMERISED FUNCTION
+ANNONYMOUS FUNCTION
+CALLBACK FUNCTION
+HIGHER ORDER FUNCTION
+ARROW FUNCTION
+=============================================================
+npx create-react-app appdemo
+hey hacking
+
+
+
 
 
 
