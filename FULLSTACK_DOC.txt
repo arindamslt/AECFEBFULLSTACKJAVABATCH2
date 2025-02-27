@@ -693,6 +693,55 @@ ARROW FUNCTION
 =============================================================
 npx create-react-app appdemo
 hey hacking
+=============================================================================
+DATE:27.02.2025
+=================================================================================
+DOM
+=============================================================================
+DOCUMENT OBJECT MODEL
+HTML DOCUMENT CONVERTED INTO OBJECT CALLED NODES AND IT WILL FORM A TREE LIKE DATA
+STRUCTURE CALLED DOM.
+HTML DOCUMENT===BROWSER ENGINE====COMPILE===BYITES===CONVERTED===TOKEN===CONVERTED===OBJECT(NODES)
+
+REACT
+========================================
+REACT IS JAVASCRIPT LIBRARY
+LIBRARY CONTAINS PREDEFINED CLASSES AND FUNCTIONS
+PURPOSE
+============================================================
+TO CREATE USER INTERFACE
+FROND END APPLICATION==REACT+OTHER LIBRARIES
+REACT ELEMENT
+JSX
+==================================================
+JSX IS 99% SIMILAR TO HTML
+JSX===BABEL COMPILER===REACT ELEMENT===REACT DOM=====RENDER()====DOM
+JSX SHOULD BE WRIITEN INTO JAVASCRIPT FUNCTION
+FUNCTIONAL COMPONENT
+=====================================
+STARTED WITH CAPITAL LETTER
+AND RETURN UI
+=======================================================================
+CREATE REACT APP TOOL
+=====================================================================
+CREATE THE PROJECT OF REACT
+npm create-react-app appdemo======INSTALL THE TOOL===DO NOT RUN
+npx create-react-app appdemo=====RUN THE TOOL
+REACT HOOK
+================================================================
+REACT HOOK IS PREDEFINED SPECIAL FUNCTION  USED FOR SPECIAL PURPOSE
+use<NAME>
+useState
+=======================================================================
+
+
+
+
+
+
+
+
+
 
 
 
