@@ -733,6 +733,11 @@ REACT HOOK IS PREDEFINED SPECIAL FUNCTION  USED FOR SPECIAL PURPOSE
 use<NAME>
 useState
 =======================================================================
+PROPS
+===========================================================
+SHARING DATA FROM PARENT TO CHILD
+
+
 
 
 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM MANIPULATION</title>
+    <script>
+        const changeH2=()=>{
+            var h2Ref=document.getElementById("domh");
+            h2Ref.innerText="DOM MANIPULATION BY JAVASCRIPT";
+
+        }
+        const changeP=()=>{
+            var pRef=document.getElementById("domp");
+            pRef.innerText="WELCOME TO JAVASCRIPT";
+        }
+    </script>
+</head>
+<body>
+ <div>
+    <h2 id="domh">DOM</h2>
+    <p id="domp">fysuiydsiudskdhskjhdsajkdhasjkhdkasjhd</p>
+    <button onclick="changeH2()">CHANGEH2</button>
+    <button onclick="changeP()">CHANGEP</button>
+ </div>
+</body>
+</html>
