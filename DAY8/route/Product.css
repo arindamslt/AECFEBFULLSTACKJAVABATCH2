@@ -1,0 +1,18 @@
+.prdContainer
+{
+    display: flex;
+}
+.prdlContainer{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    a{
+        background-color: black;
+        color: white;
+        margin: 15px auto;
+        text-decoration: none;
+    }
+}
