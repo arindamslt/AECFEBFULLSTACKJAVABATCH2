@@ -785,6 +785,28 @@ npm install react-router-dom
 ==============================================================================
 SPRING BOOT REACT INTEGRATION
 ===============================================================================
+VISUAL STUDIO CODE
+STS
+POSTMAN
+MYSQL
+=======================================================================
+REACT JS
+===============================================================
+npx create-react-app foodsapps
+npm install axios
+npm install bootstrap
+npm install react-router-dom
+Spring Boot Project
+================================================================
+FOODAPP
+=============================================
+DEPENDENCY
+=============================================
+MYSQL
+SPRING WEB
+DATA JPA
+SPRING BOOT DEV TOOLS
+===========================================================
 
 
 
