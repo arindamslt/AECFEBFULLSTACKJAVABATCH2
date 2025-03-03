@@ -807,22 +807,152 @@ SPRING WEB
 DATA JPA
 SPRING BOOT DEV TOOLS
 ===========================================================
+DATE:03.03.2025
+=========================================================================
+FULL STACK JAVA PROJECT USING SPRING BOOT AND REACT JS WITH MYSQL DATABASE
+===========================================================================
 
 
+@RestController
+@RequestMapping("/food")
+public class FoodController {
+	@Autowired
+private FoodService fservice;
+	@PostMapping("/add")
+	public ResponseEntity<String> addData(@RequestBody Food f)
+	{
+		String msg="DATA INSERETED";
+		fservice.addData(f);
+		return new ResponseEntity<String>(msg,HttpStatus.CREATED);
+	}
+}
+===============================================================================================
 
+@GetMapping("/fetch")
+	public ResponseEntity<List<Food>> getData()
+	{
+		List<Food> flist=fservice.getData();
+		return new ResponseEntity<List<Food>>(flist,HttpStatus.OK);
+	}
+============================================================================================
+FOOD ADDING URL
+=============================================
+http://localhost:1005/food/add
+FETCHING DATA
+==============================================
+http://localhost:1005/food/fetch
+====================================================================
+POSTMAN
+================================================================================
+{
+   "fid":"F1",
+   "fname":"MOMO",
+   "price":300.00
+}
+=============================================================================
+public Food getFoodidDetails(String fid)
+	{
+		return frepo.findById(fid).orElse(null);
+	}
+@GetMapping("/fetch/{fid}")
+	public ResponseEntity<Food> getFoodidDetails(@PathVariable String fid)
+	{
+		Food  f=fservice.getFoodidDetails(fid);
+		return new ResponseEntity<Food>(f,HttpStatus.OK);
+	}
+URL IS
+================================================================
+http://localhost:1005/food/fetch/F1
 
+ public void deleteData(String fid)
+    {
+    	Food f=frepo.findById(fid).orElse(null);
+    	if(f!=null)
+    	{
+    		frepo.delete(f);
+    	}
+    }
+===========================================================
+@DeleteMapping("/del/{fid}")
+	public ResponseEntity<String> deleteData(@PathVariable String fid)
+	{
+		String msg="FOOD ITEM DELETED";
+		fservice.deleteData(fid);
+		return new ResponseEntity<String>(msg,HttpStatus.OK);
+	}
+		
+URL FOR DELETE
+=================================
+http://localhost:1005/food/del/F2
+===============================================================
 
-
-
-
-
-
-
-
-
-
-
-
+public Food updateData(Food fs,String fid)
+    {
+    	
+    	Food f=frepo.findById(fid).orElse(null);
+    	if(f!=null)
+    	{
+    		f.setFname(fs.getFname());
+    		f.setPrice(fs.getPrice());
+    		frepo.save(f);
+    	}
+    	return f;
+    }
+============================================================================
+	@PutMapping("/upd/{fid}")
+	public ResponseEntity<String> updateData(@RequestBody Food f,@PathVariable String fid)
+	{
+		String msg="";
+		Food  fs=fservice.getFoodidDetails(fid);
+		if(fs!=null)
+		{
+			msg="FOOD ITEMS UPADTED SUCCESSFULLY";
+			fservice.updateData(fs, fid);
+			return new ResponseEntity<String>(msg,HttpStatus.OK);
+		}
+		else
+		{
+			msg="UPDATION FAILED";
+			return new ResponseEntity<String>(msg,HttpStatus.OK);
+		}
+	}
+==========================================================================================
+URL FOR UPDATE IS
+==========================================================================================
+http://localhost:1005/food/upd/F1
+{
+    "fname":"PIZAA",
+    "price":500.00
+}
+UNDER foodsapp FOLDER
+===================================
+npm install axios
+npm install bootsrap
+npm install react-router-dom
+=====================================================
+URL ARE
+===================================================
+FOR FOOD
+==================================================
+ADD
+===================================================
+http://localhost:1005/food/add
+FETCH
+===================================================
+http://localhost:1005/food/fetch
+==================================================
+SEARCH FOOD ID
+====================================================
+http://localhost:1005/food/fetch/F1
+====================================================
+DELETE FOOD ITEM
+=====================================================
+http://localhost:1005/food/del/F2
+======================================================
+UPDATE FOOD ITEM
+======================================================
+http://localhost:1005/food/upd/F1
+=======================================================
 
 
 

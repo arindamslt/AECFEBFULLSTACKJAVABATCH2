@@ -1,0 +1,20 @@
+.navContainer{
+    /*background-color: red;*/
+    display: flex;
+}
+.navltContainer{
+    background-color:black;
+    color: white;
+    width: 20%;
+}
+.navrtContainer{
+    background-color: black;
+    color: white;
+    width: 80%;
+    display: flex;
+    a{
+        color: white;
+        text-decoration: none;
+        margin: 10px auto;
+    }
+}
