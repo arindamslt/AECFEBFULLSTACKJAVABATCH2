@@ -953,14 +953,72 @@ UPDATE FOOD ITEM
 ======================================================
 http://localhost:1005/food/upd/F1
 =======================================================
+DATE:04.03.2025
+=======================================================================================
+ADMIN PART
+CLIENT PART
+==================================================================================
 
+@PostMapping("/add")
+	public ResponseEntity<String> addData(@RequestBody Register r)
+	{
+		String msg="REGISTRATION SUCCESSFULL";
+		rservice.addData(r);
+		return new ResponseEntity<String>(msg,HttpStatus.CREATED);
+	}
 
+@GetMapping("/fetch")
+	public ResponseEntity<List<Register>> getData()
+	{
+		List<Register>  rlist=rservice.getData();
+		return new ResponseEntity<List<Register>>(rlist,HttpStatus.OK);
+	}
+=========================================================================================
+URL FOR REGISTRATION
+========================================================================================
+http://localhost:1005/register/add
+{
+   "uname":"ajoy123",
+   "pass":"1234",
+   "nm":"AJOY",
+   "email":"aj@gmail.com",
+   "phno":"656556"
+}
+======================================================================
+FETCHING DATA
+======================================================================
+http://localhost:1005/register/fetch
+==========================================================================
+   LOGIN URL
+============================================================================
+http://localhost:1005/register/login/ajoy123/1234
+======================================================================
 
+public Register checkLogin(String uname,String pass)
+	{
+		return rrepo.checkLogin(uname, pass);
+	}
+====================================================
+@GetMapping("/login/{uname}/{pass}")
+public ResponseEntity<String> checkLogin(@PathVariable String uname,@PathVariable String pass)
+	{
+		String msg="";
+		Register rs=rservice.checkLogin(uname, pass);
+		if(rs!=null)
+		{
+			 msg="LOGIN SUCCESSFULL";
+			return new ResponseEntity<String>(msg,HttpStatus.OK);
+		}
+		else
+		{
+			 msg="LOGIN DENIED";
+			return new ResponseEntity<String>(msg,HttpStatus.OK);
+		}
+		
+	}
 
-
-
-
-
+http://localhost:1005/register/login/ajoy123/1234
+================================================================================================
 
 
 
